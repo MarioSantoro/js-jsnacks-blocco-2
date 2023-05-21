@@ -1,0 +1,17 @@
+body{
+    background-image: url("https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy-downsized-large.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+#Istruction{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+i.fa-x{
+    cursor: pointer;
+}

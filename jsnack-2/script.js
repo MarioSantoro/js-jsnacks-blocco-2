@@ -2,8 +2,8 @@
 //Ogni volta che sbaglia stampiamo in console un messaggio che gli/le dice se il numero da indovinare è maggiore o minore.
 //Una volta che ha indovinato, stampiamo in console il numero di tentativi totali.
 
-const button = document.querySelector("button");
-button.addEventListener("click" , function(){
+const buttonGame = document.querySelector("button");
+buttonGame.addEventListener("click" , function(){
     let control=true;
     let TotalTry=0;
     let RandomNumber = Math.floor(Math.random() * 100) + 1;
@@ -23,5 +23,19 @@ button.addEventListener("click" , function(){
     }
     console.log("Hai indovinato provando " + TotalTry + " volte")
 
+});
+
+const buttonIstruction = document.querySelector("a");
+const IstructionCard = document.getElementById("Istruction");
+
+buttonIstruction.addEventListener("click", function(){
+    IstructionCard.classList.remove("d-none")
+});
+
+const buttonCloseIstruction = document.querySelector("div.close-istruction");
+
+buttonCloseIstruction.addEventListener("click" , function(){
+    IstructionCard.classList.add("d-none");
 })
+
 
