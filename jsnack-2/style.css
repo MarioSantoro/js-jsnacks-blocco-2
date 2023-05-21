@@ -15,3 +15,13 @@ body{
 i.fa-x{
     cursor: pointer;
 }
+
+.card-header{
+    background-color: black;
+    color: red;
+}
+
+.card-body{
+    background-color: black;
+    color: white;
+}

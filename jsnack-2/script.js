@@ -3,6 +3,7 @@
 //Una volta che ha indovinato, stampiamo in console il numero di tentativi totali.
 
 const buttonGame = document.querySelector("button");
+const sugg= document.querySelector("span.sugg");
 buttonGame.addEventListener("click" , function(){
     let control=true;
     let TotalTry=0;
@@ -21,21 +22,27 @@ buttonGame.addEventListener("click" , function(){
             }
         }
     }
-    console.log("Hai indovinato provando " + TotalTry + " volte")
+    sugg.innerHTML="Hai indovinato provando " + TotalTry + " volte";
 
 });
 
 const buttonIstruction = document.querySelector("a");
+const cardGame = document.getElementById("CardGame");
 const IstructionCard = document.getElementById("Istruction");
+const main= document.querySelector("main");
 
 buttonIstruction.addEventListener("click", function(){
-    IstructionCard.classList.remove("d-none")
+    IstructionCard.classList.remove("d-none");
+    main.classList.add("bg-black","bg-opacity-75");
+    cardGame.classList.add("d-none");
 });
 
 const buttonCloseIstruction = document.querySelector("div.close-istruction");
 
 buttonCloseIstruction.addEventListener("click" , function(){
     IstructionCard.classList.add("d-none");
-})
+    main.classList.remove("bg-black" ,"bg-opacity-75");
+    cardGame.classList.remove("d-none");
+});
 
 
