@@ -6,4 +6,5 @@
 
 .toggle{
     text-decoration: line-through;
+    cursor: pointer;
 }
