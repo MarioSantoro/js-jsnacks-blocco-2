@@ -3,10 +3,14 @@ let playerBasket = {
     Nome : "Mimmo",
     Cognome : "Mommmo",
     Età : 23,
-    MediaPunti : 45 ,
-    PercTiriDa3 : 45 ,
-    Stoppate : 23 ,
-    Tiri : 200 
+    MediaPunti : randomNumber(0 , 50),
+    PercTiriDa3 : randomNumber(0 , 100) ,
+    Stoppate : randomNumber(0 , 30) ,
+    Tiri :  randomNumber(20 , 100)
 }
 
 console.log(playerBasket);
+function randomNumber(min , max){
+    number = Math.floor(Math.random() * max) - min;
+    return number;
+}
