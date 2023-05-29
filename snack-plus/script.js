@@ -12,12 +12,12 @@
 const ul = document.querySelector("ul");
 
 
-for(let i=0;i<10;i++){
+for(let i=0;i<60;i++){
     const Elementli = createElement();
     Elementli.addEventListener("click" , function(){
         Elementli.classList.toggle("toggle");
     });
-    
+
     ul.appendChild(Elementli);
 }
 
