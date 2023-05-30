@@ -62,11 +62,12 @@ let peperoni = [
         varietà : "giallo"
     }
 ];
+console.log(peperoni);
 
 for(let i = 0 ; i<peperoni.length ; i++){
     pesoTotale += peperoni[i].peso;
 }
-console.log(peperoni);
+
 console.log(pesoTotale);
 
 peperoni.push(CreatePepperoni(4 , 6 , "rosso"));
@@ -74,10 +75,10 @@ peperoni.push(CreatePepperoni(4 , 6 , "rosso"));
 console.log(peperoni);
 
 
-function CreatePepperoni( pezo , lung , varie){
+function CreatePepperoni( peso , lunghezza , varietà){
    return{
-    pezo,
-    lung,
-    varie
+    peso,
+    lunghezza,
+    varietà
    }
 }
