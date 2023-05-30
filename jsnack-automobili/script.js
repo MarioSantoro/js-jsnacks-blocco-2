@@ -72,7 +72,7 @@ const automobili = [
     {
         marca : "fiat",
         modello : "punto",
-        alimentazione : "benzina"
+        alimentazione : "gas"
     } ,
 ];
 
@@ -80,16 +80,15 @@ let benzina = [];
 
 for(let i = 0 ; i< automobili.length; i++){
     if(automobili[i].alimentazione === "benzina"){
-         benzina[i] = automobili[i];
+         benzina.push(automobili[i]);
     }
 }
 console.log(benzina);
-
-let diesel = automobili.forEach((autoDiesel , index) => {
+let diesel = [];
+ automobili.forEach((autoDiesel) =>{
     if(autoDiesel.alimentazione === "diesel"){
-        return true;
-   }
-   
+        diesel.push(autoDiesel)
+    }
 });
 
 console.log(diesel)
