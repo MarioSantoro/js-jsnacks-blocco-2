@@ -77,9 +77,22 @@ const automobili = [
 ];
 
 let benzina = [];
+
 for(let i = 0 ; i< automobili.length; i++){
     if(automobili[i].alimentazione === "benzina"){
          benzina[i] = automobili[i];
     }
 }
 console.log(benzina);
+
+let diesel = automobili.forEach((autoDiesel , index) => {
+    if(autoDiesel.alimentazione === "diesel"){
+        return true;
+   }
+   
+});
+
+console.log(diesel)
+
+let autoRestanti = automobili.filter((autoRestanti) => autoRestanti.alimentazione !== "benzina" && autoRestanti.alimentazione !== "diesel");
+console.log(autoRestanti);
